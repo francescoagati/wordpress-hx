@@ -1,0 +1,10 @@
+{
+"name": "wordpress-haxe",
+"url": "https://github.com/francescoagati/wordpress-hx",
+"license": "MIT",
+"classPath": "src/main",
+"tags": ["wordpress", "macro"],
+"description": "wrapper for wordpress plugin",
+"version": "0.0.1",
+"contributors": ["francescoagati"]
+}
