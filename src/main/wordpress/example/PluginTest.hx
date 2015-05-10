@@ -1,13 +1,17 @@
 package wordpress.example;
 
-@:build(wordpress.macro.Builder.build())
-@:keep
-@:keepInit
-@:keepSub
-class PluginTest {
+class PluginTest extends wordpress.Plugin {
 
   @:action('admin_head')
-  public static function addCss() {}
+  public static function addCss() {
+
+    echo("
+      .class {
+        background:red;
+      }
+    ");
+
+  }
 
 
 }
