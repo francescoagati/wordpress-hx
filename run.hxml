@@ -1,0 +1,4 @@
+-cp src/main
+-main wordpress.Main
+-php www
+-lib tink_macro packphp
