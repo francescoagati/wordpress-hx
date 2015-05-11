@@ -17,10 +17,7 @@ class Builder {
       var meta = field.meta.toMap().get(':action')[0][0];
       var name = field.name;
       return macro {
-         var fn = function() {
-           var clsRef = Type.resolveClass($v{cls});
-           Reflect.callMethod(clsRef,$i{name},[]);
-         }
+         var fn = function() $i{name}();
          untyped __call__('add_action',$meta,fn);
       };
     });
