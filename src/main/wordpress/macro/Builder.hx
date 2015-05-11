@@ -28,14 +28,11 @@ class Builder {
 
     var metaClass = (macro class TTT {
 
+       static var h = wordpress.Helper;
+
        static function __init__() {
          $b{blocks};
        }
-
-       @:extern public inline static function echo(s:String) {
-         untyped __call__('echo',s);
-       }
-
 
     });
 
