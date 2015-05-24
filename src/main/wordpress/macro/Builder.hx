@@ -16,8 +16,13 @@ using wordpress.macro.Builder.BuilderTools;
         macro {
            var fn = function(attr,content,tag) {
              //normalize attributes;
-             var new_attr = php.Lib.hashOfAssociativeArray(untyped __php__("shortcode_atts($attr)"));
-             $i{name}(new_attr,content,tag);
+             var shortCode:wordpress.types.ShortCode = {
+               attrs:php.Lib.hashOfAssociativeArray(untyped __php__("shortcode_atts($attr)")),
+               content:content,
+               tag:tag
+             }
+
+             $i{name}(shortCode);
            };
            untyped __call__('add_shortcode',$short_code,fn);
         };
