@@ -3,3 +3,4 @@
 -php www
 -lib tink_macro tink_lang
 -dce full
+-D analyzer
